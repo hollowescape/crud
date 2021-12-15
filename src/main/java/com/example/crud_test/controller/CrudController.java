@@ -36,7 +36,7 @@ public class CrudController{
         return "crud deleted";
     }
     @PutMapping("/updateCrud/{id}")
-    public Crud update(Crud crud, String id)
+    public Crud update(@RequestBody Crud crud, @PathVariable String id)
     {
         return crudService.update(crud, id);
     }
